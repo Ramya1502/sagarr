@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Song For You ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="song-page">
+
+
+    <!-- BACKGROUND -->
+
+    <div class="song-glow"></div>
+
+    <div class="song-stars"></div>
+
+
+    <!-- MAIN -->
+
+    <main class="song-container">
+
+
+        <p class="song-small">
+            ✦ A LITTLE SOMETHING ✦
+        </p>
+
+
+        <div class="song-line"></div>
+
+
+        <h1>
+            Put your<br>
+            <span>earphones on.</span>
+        </h1>
+
+
+        <p class="song-description">
+            Some things are easier<br>
+            to say through a song.
+        </p>
+
+
+        <!-- PLAY BUTTON -->
+
+        <button
+            class="play-button"
+            onclick="playSong()">
+
+            <span id="playIcon">▶</span>
+
+            <span id="playText">
+                play
+            </span>
+
+        </button>
+
+
+        <!-- AUDIO -->
+
+        <audio
+            id="birthdaySong"
+            src="song.mp3"
+            preload="auto">
+        </audio>
+
+
+        <!-- SONG STATUS -->
+
+        <p
+            id="songStatus"
+            class="song-status">
+
+            tap when you're ready ♡
+
+        </p>
+
+
+        <!-- NEXT -->
+         
+        <button id="songNext" class="song-next" onclick="goToSuspense()">
+            there's one last thing...
+        </button>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

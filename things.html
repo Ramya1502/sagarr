@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Your Gift ♡</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body class="gift-page">
+
+
+    <!-- =========================================
+         BACKGROUND STARS
+    ========================================== -->
+
+    <div class="stars"
+         style="pointer-events: none;"></div>
+
+
+    <!-- =========================================
+         CHOOSE YOUR GIFT
+    ========================================== -->
+
+    <main class="gift-container">
+
+        <p class="gift-star">✦</p>
+
+        <h1>choose your gift</h1>
+
+        <p class="gift-subtitle">
+
+            there's a little something<br>
+            waiting for you. ♡
+
+        </p>
+
+
+        <!-- =====================================
+             GIFT OPTIONS
+        ====================================== -->
+
+        <div class="gift-options">
+
+
+            <!-- LETTER -->
+
+            <button type="button"
+                    class="gift-card"
+                    onclick="openGift('letter')">
+
+                <div class="gift-icon">
+                    ♡
+                </div>
+
+                <div class="gift-info">
+
+                    <h2>
+                        a little letter
+                    </h2>
+
+                    <p>
+                        something I wanted<br>
+                        you to read.
+                    </p>
+
+                </div>
+
+                <span class="gift-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- BOUQUET -->
+
+            <button type="button"
+                    class="gift-card"
+                    onclick="openGift('bouquet')">
+
+                <div class="gift-icon">
+                    ✿
+                </div>
+
+                <div class="gift-info">
+
+                    <h2>
+                        build your bouquet
+                    </h2>
+
+                    <p>
+                        pick a few flowers<br>
+                        just for you.
+                    </p>
+
+                </div>
+
+                <span class="gift-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- MYSTERY GIFT -->
+
+            <button type="button"
+                    class="gift-card"
+                    onclick="openGift('box')">
+
+                <div class="gift-icon">
+                    ♢
+                </div>
+
+                <div class="gift-info">
+
+                    <h2>
+                        mystery gift
+                    </h2>
+
+                    <p>
+                        I wonder what's<br>
+                        inside...
+                    </p>
+
+                </div>
+
+                <span class="gift-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+        <!-- BOTTOM TEXT -->
+
+        <p class="gift-bottom">
+            take your pick ♡
+        </p>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         LETTER POPUP
+    ================================================== -->
+
+    <div id="giftPopup"
+         class="gift-popup">
+
+        <div class="sealed-note-scene">
+
+            <button class="close-gift"
+                    type="button"
+                    onclick="closeGift()">
+
+                ×
+
+            </button>
+
+
+            <div id="sealedNote"
+                 class="real-note"
+                 onclick="openLetter()">
+
+                <div class="real-note-back"></div>
+
+                <div class="real-note-paper">
+
+                    <div class="real-note-flap"></div>
+
+                    <div class="real-note-inner">
+
+                        <p>
+                            Something
+                        </p>
+
+                        <span>
+                            for you
+                        </span>
+
+                    </div>
+
+                    <div class="real-wax-seal">
+
+                        <span>
+                            ♡
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p id="letterInstruction"
+               class="sealed-instruction">
+
+                tap to open ♡
+
+            </p>
+
+
+            <div id="letterContent"
+                 class="sealed-letter-content">
+
+                <p class="sealed-small">
+                    just for you
+                </p>
+
+                <p>
+
+                    Some people become special<br>
+                    without even knowing.<br>
+                    For me it's you..
+
+                </p>
+
+                <p>
+
+                    Maybe it's the little conversations,<br>
+                    the random laughs,<br>
+                    or the moments you don't think<br>
+                    twice about.
+
+                </p>
+
+                <p>
+
+                    Somehow, those little things<br>
+                    become memories worth keeping.
+
+                </p>
+
+                <p class="sealed-end">
+
+                    That's all I wanted to say.
+
+                </p>
+
+                <span class="sealed-heart">
+                    ♡
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         BUILD YOUR BOUQUET POPUP
+    ================================================== -->
+
+    <div id="bouquetPopup"
+         class="bouquet-popup">
+
+        <div class="bouquet-board">
+
+            <button class="bouquet-close"
+                    type="button"
+                    onclick="closeBouquet()">
+
+                ×
+
+            </button>
+
+
+            <div class="paper-corner paper-top"></div>
+
+            <div class="paper-corner paper-bottom"></div>
+
+
+            <!-- HEADING -->
+
+            <div class="bouquet-heading">
+
+                <h1>
+
+                    Build Your Bouquet
+                    <span>✿</span>
+
+                </h1>
+
+                <p>
+
+                    Choose your favourite flowers......
+
+                </p>
+
+            </div>
+
+
+            <!-- BOUQUET CHOICES -->
+
+            <div class="bouquet-choices">
+
+
+                <!-- ROSE -->
+
+                <button type="button"
+                        class="bouquet-card"
+                        onclick="selectBouquet('rose', this)">
+
+                    <div class="bouquet-image">
+
+                        <img src="rose-bouquet.png"
+                             alt="Rose Bouquet">
+
+                    </div>
+
+                    <span class="bouquet-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+
+                <!-- PINK -->
+
+                <button type="button"
+                        class="bouquet-card"
+                        onclick="selectBouquet('pink', this)">
+
+                    <div class="bouquet-image">
+
+                        <img src="pink-bouquet.png"
+                             alt="Pink Lily Bouquet">
+
+                    </div>
+
+                    <span class="bouquet-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+
+                <!-- SUNFLOWER -->
+
+                <button type="button"
+                        class="bouquet-card"
+                        onclick="selectBouquet('sunflower', this)">
+
+                    <div class="bouquet-image">
+
+                        <img src="sunflower-bouquet.png"
+                             alt="Sunflower Bouquet">
+
+                    </div>
+
+                    <span class="bouquet-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- NEXT BUTTON -->
+
+            <button id="bouquetNext"
+                    type="button"
+                    class="bouquet-next"
+                    onclick="showSelectedBouquet()">
+
+                Next
+
+            </button>
+
+
+            <div class="bouquet-note">
+
+                Pick your flowers,<br>
+                build your bouquet.
+
+            </div>
+
+
+            <!-- FINAL BOUQUET -->
+
+            <div id="bouquetFinal"
+                 class="bouquet-final">
+
+                <p>
+                    just for you ♡
+                </p>
+
+                <img id="finalBouquetImage"
+                     src=""
+                     alt="Selected bouquet">
+
+                <span>
+                    picked especially for you.
+                </span>
+
+                <button type="button"
+                        onclick="closeBouquet()">
+
+                    keep it close ♡
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         MYSTERY GIFT POPUP
+    ================================================== -->
+
+    <div id="mysteryPopup"
+         class="mystery-popup">
+
+
+        <div class="mystery-board">
+
+
+            <!-- CLOSE -->
+
+            <button class="mystery-close"
+                    type="button"
+                    onclick="closeMysteryBox()">
+
+                ×
+
+            </button>
+
+
+            <!-- =====================================
+                 CLOSED MYSTERY BOX
+            ====================================== -->
+
+            <div id="mysteryClosed"
+                 class="mystery-closed">
+
+                <div class="mystery-box">
+
+                    <p class="box-tiny">
+
+                        a little surprise
+
+                    </p>
+
+                    <button class="open-heart"
+                            type="button"
+                            onclick="openMysteryBoxContent()">
+
+                        <span>
+                            OPEN
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 MYSTERY CONTENT
+            ====================================== -->
+
+            <div id="mysteryInside"
+                 class="mystery-inside">
+
+
+                <p class="miss-title">
+
+                    I MISS YOU SO MUCH
+
+                </p>
+
+
+                <!-- POLAROID -->
+
+                <div class="miss-polaroid">
+
+                    <div class="polaroid-photo">
+
+                        <img src="photo13.jpg"
+                             alt="a little memory">
+
+                    </div>
+
+                    <p class="polaroid-caption">
+
+                        one of my favourite little
+                        memories ♡
+
+                    </p>
+
+                </div>
+
+
+                <p class="miss-message">
+
+                    some moments just make me<br>
+                    miss you a little more.
+
+                </p>
+
+
+                <!-- BOTTOM TEXT -->
+
+                <p id="mysteryBottomText"
+                   class="mystery-bottom-text">
+
+                    tap to open ♡
+
+                </p>
+
+
+            </div>
+            <!-- mysteryInside CLOSE -->
+
+
+        </div>
+        <!-- mystery-board CLOSE -->
+
+
+    </div>
+    <!-- mysteryPopup CLOSE -->
+
+
+
+    <!-- =================================================
+         THINGS PAGE → SONG PAGE
+    ================================================== -->
+
+    <div class="continue-wrap"
+         style="
+             position: relative;
+             z-index: 99999;
+             pointer-events: auto;
+         ">
+
+        <button
+            type="button"
+            class="continue-btn"
+            id="continueButton"
+            style="
+                position: relative;
+                z-index: 100000;
+                pointer-events: auto;
+                cursor: pointer;
+            "
+            onclick="window.location.href='song.html'">
+
+            Continue ♡
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>
